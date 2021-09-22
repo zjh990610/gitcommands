@@ -1,0 +1,5 @@
+git init 初始git本地仓库
+git status 查看文件状态
+git add 添加文件到git暂存区
+git commit -m '注释' 从暂存区提交到本地仓库
+git log 查看日志信息
