@@ -25,3 +25,4 @@ ssh-keygen -t rsa -C "Github账户邮箱" id_rsa.pub是公钥，另一个是私�
 ssh -T git@github.com 测试是否通过sshkey与GitHub连接成功
 连接github推荐用ssh下载，传续效率高，安全性更高
 git remote add origin git@github.com:zjh990610/gitcommands.git 添加一个远程仓库
+git push -u origin master 将本地仓库文件推送到远程仓库
