@@ -20,3 +20,8 @@ git reset --hard bb9fd2b 'bb9fd2b'版本唯一标识，可以根据这个回退�
 git ls-files 查看git本地仓库中的文件目录
 git checkout <filename> 从本地仓库中拉取版本
 git rm filename 删除库及工作目录中的文件
+git clone [URL] 从指定链接处下载项目
+ssh-keygen -t rsa -C "Github账户邮箱" id_rsa.pub是公钥，另一个是私钥
+ssh -T git@github.com 测试是否通过sshkey与GitHub连接成功
+连接github推荐用ssh下载，传续效率高，安全性更高
+git remote add origin git@github.com:zjh990610/gitcommands.git 添加一个远程仓库
