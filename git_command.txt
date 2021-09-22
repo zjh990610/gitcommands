@@ -3,3 +3,17 @@ git status 查看文件状态
 git add 添加文件到git暂存区
 git commit -m '注释' 从暂存区提交到本地仓库
 git log 查看日志信息
+第二次提交
+第三次提交
+git add . 提交当前目录所有文件
+git diff HEAD -- <filename> 比较工作目录文件与本地库文件是否相同
+git restore --staged <filename> 只能移除存在暂储存区的文件
+git reset HEAD <filename> 取消上一次的操作
+第四次提交
+git commit -am '注释' 可以直接把工作目录中所有文件提交到本地仓库
+第五次提交
+git log --pretty=oneline 简化日志文件输出
+git reset --hard HEAD^ 有几个^就是回退几个版本
+git reset --hard HEAD~n n是多少就是回退到距当前版本n个版本的版本
+git reflog 产查看所有的日志信息
+git reset --hard bb9fd2b 'bb9fd2b'版本唯一标识，可以根据这个回退或者前进
