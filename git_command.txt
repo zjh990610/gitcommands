@@ -24,5 +24,11 @@ git clone [URL] 从指定链接处下载项目
 ssh-keygen -t rsa -C "Github账户邮箱" id_rsa.pub是公钥，另一个是私钥
 ssh -T git@github.com 测试是否通过sshkey与GitHub连接成功
 连接github推荐用ssh下载，传续效率高，安全性更高
+/*远程仓库绑定只需要做一次就够了*/
 git remote add origin git@github.com:zjh990610/gitcommands.git 添加一个远程仓库
 git push -u origin master 将本地仓库文件推送到远程仓库
+git branch 查看当前所有分支，带*号的就是当前分支
+git checkout -b left01 新建分支并切换到子分支，里面的内容为主干中所有内容
+git checkout 分支名 切换到对应的分支
+git branch -m OldBranchName NewBranchName 对分支进行重命名
+合并分支的操作必须切换到主干分支
