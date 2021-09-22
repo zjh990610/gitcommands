@@ -19,3 +19,4 @@ git reflog 产查看所有的日志信息
 git reset --hard bb9fd2b 'bb9fd2b'版本唯一标识，可以根据这个回退或者前进
 git ls-files 查看git本地仓库中的文件目录
 git checkout <filename> 从本地仓库中拉取版本
+git rm filename 删除库及工作目录中的文件
