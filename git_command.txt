@@ -1,8 +1,15 @@
+git config --global user.name "your_username" 配置git用户名
+git config --global user.email "your_email" 配置git邮箱
+git config --list 查看所有配置
 git init 初始git本地仓库
 git status 查看文件状态
 git add 添加文件到git暂存区
 git commit -m '注释' 从暂存区提交到本地仓库
 git log 查看日志信息
+/* 一串很长的数字(提交的版本的唯一标识)使用的SHA算法进行加密处理生成的
+ 安全Hash函数（SHA）是使用最广泛的Hash函数。由于其他曾被广泛使用的Hash函数都被发现存在安全隐患，
+ 从2005年至今，SHA或许是仅存的Hash算法标准。*/
+commit b30bff75bb79d2e87bbe686fedf18afcfbfd927d (HEAD -> master)
 第二次提交
 第三次提交
 git add . 提交当前目录所有文件
@@ -15,7 +22,7 @@ git commit -am '注释' 可以直接把工作目录中所有文件提交到本�
 git log --pretty=oneline 简化日志文件输出
 git reset --hard HEAD^ 有几个^就是回退几个版本
 git reset --hard HEAD~n n是多少就是回退到距当前版本n个版本的版本
-git reflog 产查看所有的日志信息
+git reflog 查看所有的日志信息
 git reset --hard bb9fd2b 'bb9fd2b'版本唯一标识，可以根据这个回退或者前进
 git ls-files 查看git本地仓库中的文件目录
 git checkout <filename> 从本地仓库中拉取版本
@@ -23,12 +30,20 @@ git rm filename 删除库及工作目录中的文件
 git clone [URL] 从指定链接处下载项目
 ssh-keygen -t rsa -C "Github账户邮箱" id_rsa.pub是公钥，另一个是私钥
 ssh -T git@github.com 测试是否通过sshkey与GitHub连接成功
-连接github推荐用ssh下载，传续效率高，安全性更高
+/*连接github推荐用ssh下载，传续效率高，安全性更高*/
 /*远程仓库绑定只需要做一次就够了*/
 git remote add origin git@github.com:zjh990610/gitcommands.git 添加一个远程仓库
 git push -u origin master 将本地仓库文件推送到远程仓库
 git branch 查看当前所有分支，带*号的就是当前分支
-git checkout -b left01 新建分支并切换到子分支，里面的内容为主干中所有内容
-git checkout 分支名 切换到对应的分支
-git branch -m OldBranchName NewBranchName 对分支进行重命名
-合并分支的操作必须切换到主干分支
+git checkout -b NewBranchName 新建分支并切换到子分支，里面的内容为主干中所有内容
+git checkout BranchName 切换到对应的分支
+git branch -m | -M(强制重命名) OldBranchName NewBranchName 对分支进行重命名
+git branch -d | D(强制删除) BranchName 删除分支
+/*在分支上合并主干git不会报错，但工作中式不允许的*/
+git merge BranchName 合并分支 合并分支的操作必须切换到主干分支
+git branch -a 查看本地与远程分支
+git push origin branch_name 推送本地分支到远程
+git push origin :remote_branch 删除远程分支(本地分支还在保留)
+git checkout -b loacl_branch origin/remote_branch 拉取远程指定分支并在本地创建分支
+远程分支推送
+git fetch 获取远程仓库最新状态
